@@ -10,12 +10,13 @@ var logger = require('morgan'); //
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
+require('dotenv').config();
 
 //Configurations
 
-const API_KEY = '***REMOVED***';
-const API_SECRET = '***REMOVED***';
-const USER_ID = '***REMOVED***';
+const API_KEY = process.env.API_KEY;
+const API_SECRET = process.env.API_SECRET;
+const USER_ID = process.env.USER_ID;
 
 //Initialise API module
 
