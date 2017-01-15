@@ -1,0 +1,12 @@
+<div class="full-window appear" ng-switch="$ctrl.state" ng-hide="!$ctrl.show">
+    <div class="error" ng-switch-when="-1">
+        There appears to be an error... you should not be seeing this.
+    </div>
+    <div class="loading appear" ng-switch-when="0">
+        <div id="loader">
+            <div id="box"></div>
+            <div id="hill"></div>
+        </div>
+    </div>
+    <fullscreen-img src="$ctrl.src" ng-switch-when="200"/>
+</div>

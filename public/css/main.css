@@ -1,0 +1,459 @@
+/* Global definitions */
+
+@font-face {
+    font-family: TWEL;
+    src: url(fonts/TitilliumWeb-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: TWR;
+    src: url(fonts/TitilliumWeb-regular.ttf);
+}
+
+
+body {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.full-window {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+
+
+.loading{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    top:0;
+    left:0;
+    position: fixed;
+    padding-left: 30%;
+    padding-top: 30%;
+}
+
+/* Album selector styles */
+
+.album-list-wrapper {
+    position: fixed;
+    z-index: 200;
+    display: block;
+    width: 100%;
+    height: 70px;
+    margin-left: 80%;
+    top: 70%;
+
+}
+
+ul.album-list {
+    list-style-type: none;
+}
+
+.album-list {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.album {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+
+/* Gallery styles */
+
+ul.gallery {
+    list-style-type: none;
+}
+
+
+.gallery-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    vertical-align: middle;
+    text-align: center;
+
+    display: table;
+    background: transparent;
+}
+
+.image-wrapper{
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background: transparent;
+
+}
+
+.image-wrapper.portrait {
+    height: 110vh;
+}
+
+.image-wrapper.landscape{
+    height: 110vh;
+    width: 120vw;
+}
+
+img.gallery-image {
+    position: relative;
+    z-index: 1;
+    left: auto;
+    right: auto;
+
+}
+
+img.portrait {
+    max-height: 110vh;
+}
+
+img.landscape {
+/*    max-height: 110vh;*/
+    max-width: 120vw;
+    top: -10vh;
+}
+
+
+.bg-img {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+
+/*** Gallery controls */
+
+.gallery-controls-wrapper {
+    display: block;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 45%;
+    z-index: 300;
+}
+
+.gallery-control {
+    display: block;
+    position: fixed;
+    padding: 5px 5px 5px 5px;
+    width: 130px;
+    height: 130px;
+    background-color: transparent;
+
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+
+}
+
+.gallery-control-button {
+    transform: rotate(-45deg);
+    height:100%;
+    width: 100%;
+}
+
+.gallery-control-button.right {
+    border-right: .25em solid whitesmoke;
+    border-bottom: .25em solid whitesmoke;
+}
+
+.gallery-control-button.left {
+    border-left: .25em solid whitesmoke;
+    border-top: .25em solid whitesmoke;
+}
+
+.gallery-control::after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: fixed;
+    width: 40px;
+    top: 0;
+    opacity: 0.6;
+}
+.gallery-control.right::after{
+    background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, transparent, whitesmoke); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, transparent, whitesmoke); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, transparent, whitesmoke); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, transparent, whitesmoke); /* Standard syntax */
+
+    transition: background-color 300ms ease;
+    -webkit-transition: right 500ms ease;
+    -moz-transition: right 500ms ease;
+
+    right: -40px;
+}
+
+.gallery-control.left::after{
+    background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, transparent, whitesmoke); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, transparent, whitesmoke); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, transparent, whitesmoke); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, transparent, whitesmoke); /* Standard syntax */
+
+    transition: background-color 300ms ease;
+    -webkit-transition: left 500ms ease;
+    -moz-transition: left 500ms ease;
+
+    left: -40px;
+}
+
+.gallery-control.right:hover::after{
+    right:-10px;
+}
+
+.gallery-control.left:hover::after{
+    left:-10px;
+}
+
+
+
+
+/* Menu styles */
+
+.col {
+    width: 412px;
+}
+
+.fab {
+    position: fixed;
+    z-index: 2000;
+}
+
+.fab.fab-menu{
+    background: rgba(245, 245, 245, 0.05) url('../img/fab-menu.png');
+    background-size: cover;
+    height: 60px;
+    width: 70px;
+    left: 20px;
+    bottom: 20px;
+}
+
+.menu-block{
+    width: 100%;
+    display: block;
+} /*TODO: Rename this*/
+
+.menu-element-text {
+    margin-left: 20px;
+    height: 100%;
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.menu-element {
+    width: 100%;
+    height: 70px;
+    display: block;
+    border-bottom: 1px rgba(245,245,245,0.5) solid;
+    background-color: rgba(245,245,245,0);
+    transition: background-color 300ms ease;
+    -webkit-transition: 300ms all;
+    -moz-transition: 300ms all;
+
+} /*TODO: Rename this to menu-block*/
+
+.menu-element:hover{
+    background-color: rgba(245,245,245,0.2) ;
+}
+
+a.menu-element, a.menu-element:hover, a.menu-element:link, a.menu-element:visited, a.menu-element:active {
+    color: whitesmoke;
+    font-family: TWEL;
+    font-weight: 100;
+    font-size: larger;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.menu-element::after{
+    content: '';
+    display: block;
+    position: absolute;
+
+    top: auto;
+    bottom: auto;
+
+    right: 10px;
+
+    height: 10px;
+    width: 10px;
+
+    border-bottom: 1px rgba(245,245,245,0.5) solid;
+    border-right: 1px rgba(245,245,245,0.5) solid;
+
+    transform: rotate(-45deg);
+    transform-origin: 100% 100%;
+}
+
+.menu-title{
+    display: block;
+    background-color: #333;
+    height: 70px;
+    border-bottom: 1px rgba(245,245,245,0.5) solid;
+}
+
+.menu-wrapper.overlay{
+    z-index: 1000;
+}
+
+.full-window.overlay{
+    z-index:500;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+}
+
+.overlay.glass{
+    background-color: rgba(245, 245, 245, 0.1);
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.col.slide-left.ng-hide {
+    left:-415px;
+}
+
+.slide-left.ng-hide-add,
+.slide-left.ng-hide-remove{
+    display: block !important;
+}
+
+.slide-left.ng-hide-add {
+    transition: left 500ms ease;
+    -moz-transition: left 500ms ease;
+    -webkit-transition: left 500ms ease;
+    -o-transition: left 500ms ease;
+}
+
+.slide-left.ng-hide-remove {
+    transition: left 500ms ease;
+    -moz-transition: left 500ms ease;
+    -webkit-transition: left 500ms ease;
+    -o-transition: left 500ms ease;
+}
+
+/* Title  styles */
+
+.title {
+    display: block;
+    position: fixed;
+    top: 85vh;
+    left: 10vw;
+    z-index: 500;
+
+}
+
+.title h1{
+    font-family: TWEL;
+    font-size: xx-large;
+    color: whitesmoke;
+}
+
+.title h3{
+    font-family: "Avenir Next Condensed"; /*TODO: Add @font-face*/
+    font-weight: 100;
+    font-size: x-large;
+    color: whitesmoke;
+}
+
+
+/* Animations */
+
+.appear.ng-hide {
+    opacity:0;
+}
+
+.appear.ng-hide-remove,
+.appear.ng-hide-add{
+    display: block !important;
+}
+
+.appear.ng-hide-add {
+    transition: opacity 500ms linear;
+    -moz-transition: opacity 500ms linear;
+    -webkit-transition: opacity 500ms linear;
+    -o-transition: opacity 500ms linear;
+}
+
+.appear.ng-hide-remove {
+    transition: opacity 500ms linear;
+    -moz-transition: opacity 500ms linear;
+    -webkit-transition: opacity 500ms linear;
+    -o-transition: opacity 500ms linear;
+}
+
+.ripple{
+    overflow:hidden;
+}
+
+.ripple-effect{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: white;
+
+
+    animation: ripple-animation 2s;
+}
+
+
+@keyframes ripple-animation {
+    from {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(100);
+        opacity: 0;
+    }
+}
+
