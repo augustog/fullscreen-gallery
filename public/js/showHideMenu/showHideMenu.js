@@ -31,4 +31,10 @@ function overlayController($state, $timeout){
 }
 
 angular.module('ag-gallery')
-    .controller('overlayController', overlayController);
+    .controller('overlayController', overlayController)
+    .component('showHideMenu', {
+        templateUrl: 'js/showHideMenu/showHideMenu.html',
+        controller: menuController,
+        bindings: {},
+        controllerAs: 'menu'
+    });

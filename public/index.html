@@ -22,7 +22,7 @@
 
     <script src="js/connectorService.js"></script>
     <script src="js/stateMenu/stateMenu.js"></script>
-    <script src="js/overlayController.js"></script>
+    <script src="js/showHideMenu/showHideMenu.js"></script>
     <script src="js/preloadingImg/preloadingImg.js"></script>
     <script src="js/fullscreenImg/fullscreenImg.js"></script>
     <script src="js/fullscreenGallery/fullscreenGallery.js"></script>
@@ -57,21 +57,6 @@
                 </nav>
             </div>
         </div>
-    <div class="overlay" ng-controller="overlayController as overlay">
-        <div
-                class="fab fab-menu"
-                ng-click="overlay.toggleMenu();"
-        ></div>
-        <div
-                class="right overlay glass full-height col menu-wrapper slide-left"
-                ng-show="overlay.menuVisible"
-        >
-            <div class="menu-block menu-title">
-                Navigation Menu
-            </div>
-            <state-menu></state-menu>
-        </div>
-        <section class="full-window overlay" ng-show="overlay.viewportVisible" ui-view></section>
-        </div>
+    <show-hide-menu></show-hide-menu>
 </body>
 </html>
