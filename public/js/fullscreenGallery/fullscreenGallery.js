@@ -4,7 +4,7 @@
 function galleryController($scope, $timeout, connectorService){
     //Set up gallery
     
-    var vm = $scope; //aliasing to easily adapt to controllerAs pattern later
+    var vm = this; //aliasing to easily adapt to controllerAs pattern later
 
     const PRELOAD_LENGTH = 3; //how many imgs to preload
     const AUTO_FWD_TIMEOUT = 10000;
@@ -66,4 +66,8 @@ function galleryController($scope, $timeout, connectorService){
 }
 
 angular.module('ag-gallery')
-    .controller('galleryController', galleryController);
+    .component('fullscreenGallery', {
+        templateUrl: '/js/fullscreenGallery/fullscreenGallery.html',
+        controller: galleryController(),
+        bindings: {} //TODO: Add binding to externally provide gallery object
+    });

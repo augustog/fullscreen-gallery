@@ -25,9 +25,9 @@
     <script src="js/preloadingImg/preloadingImg.js"></script>
     <script src="js/fullscreenImg/fullscreenImg.js"></script>
     <script src="js/connectorService.js"></script>
-    <script src="js/galleryController.js"></script>
+    <script src="js/fullscreenGallery/fullscreenGallery.js"></script>
     <script src="js/selectorController.js"></script>
-    <script src="js/bgImg.js"></script>
+    <script src="js/bgImg/bgImg.js"></script>
     <script src="js/ripple.js"></script>
 
 
@@ -40,28 +40,8 @@
         <h1>Augusto Gesualdi</h1>
         <h3>Adventure Photography</h3>
     </div>
-    <div class ="gallery-viewport">
-            <div class="gallery" ng-controller="galleryController">
-                <div class="gallery-controls-wrapper">
-                    <div class="gallery-control right"  ng-click="next()">
-                        <div class="gallery-control-button right"></div>
-                    </div>
-                    <div class="gallery-control left" ng-click="previous()">
-                        <div class="gallery-control-button left"></div>
-                    </div>
-                </div>
-                <ul>
-                    <li ng-repeat="photo in photos">
-                        <p-img
-                                src="photo.url_o"
-                                do-preload="photo.preload"
-                                show="photo.show"
-                        >
-                        </p-img>
-                    </li>
-                </ul>
-            </div>
-    </div>
+    <fullscreenGallery></fullscreenGallery>
+
         <div class="menu-block album-list-wrapper" ng-controller="selectorController">
             <div class="loading appear" ng-show="loading">
                 <div id="loader">

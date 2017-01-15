@@ -1,0 +1,22 @@
+<div class ="gallery-viewport">
+    <div class="gallery">
+        <div class="gallery-controls-wrapper">
+            <div class="gallery-control right"  ng-click="gallery.next()">
+                <div class="gallery-control-button right"></div>
+            </div>
+            <div class="gallery-control left" ng-click="gallery.previous()">
+                <div class="gallery-control-button left"></div>
+            </div>
+        </div>
+        <ul>
+            <li ng-repeat="photo in gallery.photos">
+                <p-img
+                        src="photo.url_o"
+                        do-preload="photo.preload"
+                        show="photo.show"
+                >
+                </p-img>
+            </li>
+        </ul>
+    </div>
+</div>
