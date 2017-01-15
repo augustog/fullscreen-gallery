@@ -69,5 +69,6 @@ angular.module('ag-gallery')
     .component('fullscreenGallery', {
         templateUrl: '/js/fullscreenGallery/fullscreenGallery.html',
         controller: galleryController(),
-        bindings: {} //TODO: Add binding to externally provide gallery object
+        bindings: {}, //TODO: Add binding to externally provide gallery object
+        controllerAs: 'gallery'
     });

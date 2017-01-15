@@ -34,5 +34,6 @@ angular.module('ag-gallery')
     .component('stateMenu', {
         templateUrl: '/js/stateMenu/stateMenu.html',
         controller: menuController,
-        bindings: {}
+        bindings: {},
+        controllerAs: 'menu'
     });
