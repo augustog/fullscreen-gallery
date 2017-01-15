@@ -31,6 +31,7 @@ function menuController ($state){
 
 
 angular.module('ag-gallery')
+    .controller('menuController', menuController)
     .component('stateMenu', {
         templateUrl: '/js/stateMenu/stateMenu.html',
         controller: menuController,

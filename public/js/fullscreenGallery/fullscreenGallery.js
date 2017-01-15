@@ -66,9 +66,10 @@ function galleryController($scope, $timeout, connectorService){
 }
 
 angular.module('ag-gallery')
+    .controller('galleryController', galleryController) //TODO: Fix this horrible hack
     .component('fullscreenGallery', {
         templateUrl: '/js/fullscreenGallery/fullscreenGallery.html',
-        controller: galleryController(),
+        controller: galleryController,
         bindings: {}, //TODO: Add binding to externally provide gallery object
         controllerAs: 'gallery'
     });

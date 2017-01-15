@@ -20,11 +20,11 @@
     <script src="js/core.js"></script>
     <script src="js/states.js"></script>
 
-    <script src="js/stateMenu/stateMenu.js"></script>
+    <script src="js/connectorService.js"></script>
+<!--    <script src="js/stateMenu/stateMenu.js"></script>-->
     <script src="js/overlayController.js"></script>
     <script src="js/preloadingImg/preloadingImg.js"></script>
     <script src="js/fullscreenImg/fullscreenImg.js"></script>
-    <script src="js/connectorService.js"></script>
     <script src="js/fullscreenGallery/fullscreenGallery.js"></script>
     <script src="js/selectorController.js"></script>
     <script src="js/bgImg/bgImg.js"></script>
@@ -40,7 +40,7 @@
         <h1>Augusto Gesualdi</h1>
         <h3>Adventure Photography</h3>
     </div>
-    <fullscreenGallery></fullscreenGallery>
+    <fullscreen-gallery></fullscreen-gallery>
 
         <div class="menu-block album-list-wrapper" ng-controller="selectorController">
             <div class="loading appear" ng-show="loading">
@@ -64,15 +64,12 @@
         ></div>
         <div
                 class="right overlay glass full-height col menu-wrapper slide-left"
-                ng-controller="menuController as menu"
                 ng-show="overlay.menuVisible"
         >
             <div class="menu-block menu-title">
                 Navigation Menu
             </div>
-        <stateMenu></stateMenu>
         </div>
         <section class="full-window overlay" ng-show="overlay.viewportVisible" ui-view></section>
-    </div>
 </body>
 </html>
