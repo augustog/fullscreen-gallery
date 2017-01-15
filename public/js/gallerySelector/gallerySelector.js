@@ -50,4 +50,10 @@ var selectorController = function($scope, $http, connectorService){
 };
 
 angular.module('ag-gallery')
-    .controller('selectorController', selectorController);
+    .controller('selectorController', selectorController)
+    .component('gallerySelector', {
+        templateUrl: 'js/gallerySelector/gallerySelector.html',
+        controller: selectorController,
+        bindings: {}, //TODO: Add bindings to export gallery object
+        controllerAs: 'selector'
+    });

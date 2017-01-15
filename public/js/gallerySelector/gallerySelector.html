@@ -1,0 +1,15 @@
+<div class="menu-block album-list-wrapper">
+    <div class="loading appear" ng-show="selector.loading">
+        <div id="loader">
+            <div id="box"></div>
+            <div id="hill"></div>
+        </div>
+    </div>
+    <div class="album-list">
+        <nav>
+            <a class="album" ng-repeat="gallery in selector.galleries" href="#" ng-click="selector.changeGallery(gallery)">
+                <img class="album-list-item" ng-src="{{ gallery.primary_photo_extras.url_sq }}" />
+            </a>
+        </nav>
+    </div>
+</div>

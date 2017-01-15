@@ -26,7 +26,7 @@
     <script src="js/preloadingImg/preloadingImg.js"></script>
     <script src="js/fullscreenImg/fullscreenImg.js"></script>
     <script src="js/fullscreenGallery/fullscreenGallery.js"></script>
-    <script src="js/selectorController.js"></script>
+    <script src="js/gallerySelector/gallerySelector.js"></script>
     <script src="js/bgImg/bgImg.js"></script>
     <script src="js/ripple.js"></script>
 
@@ -41,22 +41,7 @@
         <h3>Adventure Photography</h3>
     </div>
     <fullscreen-gallery></fullscreen-gallery>
-
-        <div class="menu-block album-list-wrapper" ng-controller="selectorController">
-            <div class="loading appear" ng-show="loading">
-                <div id="loader">
-                    <div id="box"></div>
-                    <div id="hill"></div>
-                </div>
-            </div>
-            <div class="album-list">
-                <nav>
-                    <a class="album" ng-repeat="gallery in galleries" href="#" ng-click="changeGallery(gallery)">
-                        <img ng-src="{{ gallery.primary_photo_extras.url_sq }}" />
-                    </a>
-                </nav>
-            </div>
-        </div>
+    <gallery-selector></gallery-selector>
     <show-hide-menu></show-hide-menu>
 </body>
 </html>
