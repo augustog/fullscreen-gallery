@@ -273,7 +273,7 @@ img.landscape {
 } /*TODO: Rename this*/
 
 .menu-element-text {
-    margin-left: 20px;
+    padding-left: 20px;
     height: 100%;
     display: table-cell;
 
@@ -294,6 +294,11 @@ img.landscape {
 
 .menu-element:hover{
     background-color: rgba(245,245,245,0.2) ;
+}
+
+.menu-element-text {
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 a.menu-element, a.menu-element:hover, a.menu-element:link, a.menu-element:visited, a.menu-element:active {
@@ -332,6 +337,15 @@ a.menu-element, a.menu-element:hover, a.menu-element:link, a.menu-element:visite
     background-color: #333;
     height: 70px;
     border-bottom: 1px rgba(245,245,245,0.5) solid;
+}
+
+.menu-title h1{
+    font-size: x-large;
+    font-family: TWR;
+    color: whitesmoke;
+
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .menu-wrapper.overlay{
