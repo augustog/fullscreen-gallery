@@ -5,7 +5,7 @@
  "main": "server.js",
  "author": "Augusto",
  "engines": {
-   "node":"4.1.1",
+   "node":"4.1.1"
  },
  "dependencies": {
    "angular-animate": "^1.5.9",
